@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif, monospace;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(97, 97, 97);
+}
+
+li {
+  list-style: none;
+}
+.sidebar-label-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.sidebar-label-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.sidebar-label-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.sidebar-label-container .checkmark:after {
+  top: 6.4px;
+  left: 6.4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+}
